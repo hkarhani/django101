@@ -29,8 +29,6 @@ Vagrant.configure("2") do |config|
     # Upgrade pip to the latest version.
     sudo pip install --upgrade pip
 
-    config.vm.synced_folder ".", "/vagrant”
-
     # Install and configure python virtualenvwrapper.
     sudo pip install virtualenvwrapper
     if ! grep -q VIRTUALENV_ALREADY_ADDED /home/ubuntu/.bashrc; then
